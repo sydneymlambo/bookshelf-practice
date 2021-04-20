@@ -1,14 +1,14 @@
 const config = {
-    production: {
+    production:{
         SECRET: process.env.SECRET,
         DATABASE: process.env.MONGODB_URI
     },
-    default: {
-        SECRET: 'superadmin123',
-        DATABASE: 'mongodb://localhost:27017/bookshelf'
+    default:{
+        SECRET: 'SUPERSECRETPASSWORD123',
+        DATABASE: 'mongodb://localhost:27017/booksShelf'
     }
 }
 
-exports.get = function get(env) {
+exports.get = function get(env){
     return config[env] || config.default
-}
+} 
